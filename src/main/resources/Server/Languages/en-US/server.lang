@@ -1,0 +1,21 @@
+items.Bench_Transmog.name = Transmog Bench
+items.Bench_Transmog.description = A bench made for transmogging items.
+
+msg.transmog.item = Item
+msg.transmog.itemid = Item Id
+msg.transmog.success = Applied transmog {transmogItemId} to item {originalItem}.
+msg.transmog.clear = Cleared transmog {transmogItemId} from item {originalItem}.
+msg.transmog.couldnotupdate = Could not update the selected item.
+msg.transmog.novaliditem = There is no valid item to transmog.
+msg.transmog.notransmogitem = That item does not have a transmog applied.
+msg.transmog.transmogitemempty = Transmog item id cannot be empty.
+msg.transmog.invaliditem = Invalid item.
+msg.transmog.sourceitemidempty = Source item id cannot be empty.
+msg.transmog.nousablemodel = Item {originalItem} does not have a usable model.
+msg.transmog.nousabletexture =  Item {originalItem} does not have a usable texture.
+msg.transmog.couldnotupdateslot = Could not update the held item slot.
+msg.transmog.appliedtransmogtoitem = Applied model from item {transmogItemId} to the held item.
+msg.transmog.itemnotinhand = You must be holding an item to transmog.
+msg.transmog.clearedtransmogfromitem = Cleared transmog {currentTransmogItemId} from the held item {originalItem}.
+msg.transmog.missingitemid = Missing item id.
+msg.transmog.unknownitemid = Unknown item id {itemId}.

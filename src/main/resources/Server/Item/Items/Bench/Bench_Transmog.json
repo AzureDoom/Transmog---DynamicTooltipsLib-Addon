@@ -1,0 +1,101 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_Transmog.name",
+    "Description": "server.items.Bench_Transmog.description"
+  },
+  "ItemLevel": 7,
+  "MaxStack": 1,
+  "Icon": "Icons/ItemsGenerated/Bench_Transmog.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "Recipe": {
+    "TimeSeconds": 3,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 12
+      },
+      {
+        "ResourceTypeId": "Wood_Trunk",
+        "Quantity": 5
+      },
+      {
+        "ResourceTypeId": "Rock",
+        "Quantity": 5
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Type": "Crafting",
+        "Categories": [
+          "Workbench_Crafting"
+        ],
+        "RequiredTierLevel": 3
+      }
+    ]
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Transmog.blockymodel",
+    "HitboxType": "Bench_Transmog",
+    "VariantRotation": "NESW",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Benches/Transmog_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "InteractionHint": "server.items.Bench_Transmog.interaction",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "OpenCustomUI",
+            "Page": {
+              "Id": "Bench_Transmog"
+            }
+          }
+        ]
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches",
+        "DropList": "Bench_Transmog"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "ParticleColor": "#6e4a2f",
+    "BlockSoundSetId": "Wood",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    }
+  },
+  "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Rotation": [
+      22.5,
+      45.0,
+      22.5
+    ],
+    "Translation": [
+      12.9,
+      -11.7
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

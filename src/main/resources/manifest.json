@@ -1,0 +1,26 @@
+{
+    "Group": "com.azuredoom",
+    "Name": "transmog",
+    "Version": "0.0.1",
+    "Description": "Adds a workbench that uses DynamicTooltipsLib Visual Overrides system to transmog items",
+    "Authors": [
+        {
+            "Name": "AzureDoom"
+        }
+    ],
+    "Website": "https://modtale.net/mod/transmog-dynamictooltipslib-addon",
+    "ServerVersion": "2026.03.26-89796e57b",
+    "Dependencies": {
+        "Hytale:AssetModule": "*",
+        "org.herolias:DynamicTooltipsLib": "*"
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "Main": "com.azuredoom.transmog.TransmogMod",
+    "IncludesAssetPack": true,
+    "UpdateChecker": {
+        "CurseForge": "1509471"
+    }
+}
