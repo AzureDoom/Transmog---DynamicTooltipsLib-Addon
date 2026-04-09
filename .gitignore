@@ -1,0 +1,21 @@
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+caches
+daemon
+wrapper
+native
+
+# allow gradlew
+!gradle/wrapper
+# gradle
+build
+.gradle
+.profileconfig.json
+run
+libs/PartyPro
+
+.vscode
