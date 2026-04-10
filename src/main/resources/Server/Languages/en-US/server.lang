@@ -1,5 +1,7 @@
 items.Bench_Transmog.name = Transmog Bench
 items.Bench_Transmog.description = A bench made for transmogging items.
+benchCategories.applyTransmog.name = Apply Transmog
+benchCategories.removeTransmog.name = Remove Transmog
 
 msg.transmog.item = Item
 msg.transmog.itemid = Item Id

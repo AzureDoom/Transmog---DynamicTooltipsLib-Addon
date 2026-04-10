@@ -1,11 +1,9 @@
 package com.azuredoom.transmog.provider;
 
+import com.azuredoom.transmog.TransmogMod;
 import com.hypixel.hytale.server.core.asset.type.item.config.Item;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
-import org.herolias.tooltips.api.ItemVisualOverrides;
-import org.herolias.tooltips.api.TooltipData;
-import org.herolias.tooltips.api.TooltipPriority;
-import org.herolias.tooltips.api.TooltipProvider;
+import org.herolias.tooltips.api.*;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -79,6 +77,13 @@ public class ItemTransmogTooltipProvider implements TooltipProvider {
             overrides.texture(texture);
         }
 
+        var api = DynamicTooltipsApiProvider.get();
+        if (api == null) {
+            TransmogMod.severeLog("DynamicTooltipsLib is not installed!");
+            return null;
+        }
+
+        api.addGlobalLine(transmogItemId, "Item has transmog of " + transmogItem.getId());
         return TooltipData.builder()
             .hashInput(ItemTransmogUtil.buildHashInput(itemId, transmogItemId, model + "|" + texture))
             .visualOverrides(overrides.build())

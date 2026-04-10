@@ -3,9 +3,7 @@
     "Name": "server.items.Bench_Transmog.name",
     "Description": "server.items.Bench_Transmog.description"
   },
-  "ItemLevel": 7,
-  "MaxStack": 1,
-  "Icon": "Icons/ItemsGenerated/Bench_Alchemy.png",
+  "Icon": "Icons/ItemsGenerated/Bench_Armory.png",
   "Categories": [
     "Furniture.Benches"
   ],
@@ -32,7 +30,7 @@
         "Categories": [
           "Workbench_Crafting"
         ],
-        "RequiredTierLevel": 3
+        "RequiredTierLevel": 2
       }
     ]
   },
@@ -40,56 +38,77 @@
     "Material": "Solid",
     "DrawType": "Model",
     "Opacity": "Transparent",
-    "CustomModel": "Blocks/Benches/Alchemy.blockymodel",
-    "HitboxType": "Bench_Alchemy",
-    "VariantRotation": "NESW",
+    "CustomModel": "Blocks/Benches/Armory.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Blocks/Benches/Alchemy_Texture.png",
+        "Texture": "Blocks/Benches/Armory_Texture.png",
         "Weight": 1
       }
     ],
-    "InteractionHint": "server.items.Bench_Transmog.interaction",
-    "Interactions": {
-      "Use": {
-        "Interactions": [
-          {
-            "Type": "OpenCustomUI",
-            "Page": {
-              "Id": "Bench_Transmog"
-            }
-          }
-        ]
+    "HitboxType": "Bench_Alchemy",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Type": "Crafting",
+      "LocalOpenSoundEventId": "SFX_Arcane_Workbench_Open_Local",
+      "LocalCloseSoundEventId": "SFX_Arcane_Workbench_Close_Local",
+      "CompletedSoundEventId": "SFX_Arcane_Workbench_Craft",
+      "Categories": [
+        {
+          "Id": "Apply_Transmog",
+          "Icon": "Icons/CraftingCategories/Armory/Weapons.png",
+          "Name": "server.benchCategories.applyTransmog.name"
+        },
+        {
+          "Id": "Remove_Transmog",
+          "Icon": "Icons/CraftingCategories/Farming/Essence.png",
+          "Name": "server.benchCategories.removeTransmog.name"
+        }
+      ],
+      "Id": "AzTransmogBench"
+    },
+    "BlockEntity": {
+      "Components": {
+        "BenchBlock": {}
+      }
+    },
+    "State": {
+      "Definitions": {
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim"
+        }
       }
     },
     "Gathering": {
       "Breaking": {
-        "GatherType": "Benches",
-        "DropList": "Bench_Transmog"
+        "GatherType": "Benches"
       }
     },
-    "BlockParticleSetId": "Stone",
-    "ParticleColor": "#5C583E",
-    "BlockSoundSetId": "Stone",
+    "BlockParticleSetId": "Wood",
+    "ParticleColor": "#6e4a2f",
     "Support": {
       "Down": [
         {
           "FaceType": "Full"
         }
       ]
-    }
+    },
+    "BlockSoundSetId": "Stone"
   },
   "PlayerAnimationsId": "Block",
   "IconProperties": {
-    "Scale": 0.435,
+    "Scale": 0.35,
+    "Rotation": [
+      22.5,
+      45.0,
+      22.5
+    ],
     "Translation": [
       11.4,
       -18.6
-    ],
-    "Rotation": [
-      22.5,
-      45,
-      22.5
     ]
   },
   "Tags": {
@@ -97,5 +116,7 @@
       "Bench"
     ]
   },
+  "MaxStack": 1,
+  "ItemLevel": 10,
   "ItemSoundSetId": "ISS_Blocks_Wood"
 }
