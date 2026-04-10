@@ -41,4 +41,20 @@ public record TranslationKeys() {
     public static final String TRANSMOG_ITEM = "server.msg.transmog.item";
 
     public static final String TRANSMOG_ITEM_ID = "server.msg.transmog.itemid";
+
+    public static final String TRANSMOG_HELD_ITEM = "server.msg.transmog.helditem";
+
+    public static final String TRANSMOG_NOT_TRANSMOG = "server.msg.transmog.notransmog";
+
+    public static final String TRANSMOG_ID = "server.msg.transmog.transmogitemid";
+
+    public static final String TRANSMOG_MISSING_SOURCE_ITEM = "server.msg.transmog.missingsourceitem";
+
+    public static final String TRANSMOG_FOUND_SOURCE_ITEM = "server.msg.transmog.foundsourceitem";
+
+    public static final String TRANSMOG_MODEL_RESULT = "server.msg.transmog.modelresult";
+
+    public static final String TRANSMOG_TEXTURE_RESULT = "server.msg.transmog.textureresult";
+
+    public static final String TRANSMOG_SAME_VISUALS_REPORT = "server.msg.transmog.samevisualsreport";
 }
