@@ -1,6 +1,5 @@
 package com.azuredoom.transmog.provider;
 
-import com.azuredoom.transmog.TransmogMod;
 import com.hypixel.hytale.server.core.asset.type.item.config.Item;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 import org.herolias.tooltips.api.*;
@@ -8,6 +7,7 @@ import org.herolias.tooltips.api.*;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
+import com.azuredoom.transmog.TransmogMod;
 import com.azuredoom.transmog.util.ItemTransmogUtil;
 
 /**
@@ -79,7 +79,7 @@ public class ItemTransmogTooltipProvider implements TooltipProvider {
 
         var api = DynamicTooltipsApiProvider.get();
         if (api == null) {
-            TransmogMod.severeLog("DynamicTooltipsLib is not installed!");
+            TransmogMod.severeLog("DynamicTooltipsLib is not initialized yet!");
             return null;
         }
 
