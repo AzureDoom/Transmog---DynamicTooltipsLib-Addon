@@ -1,6 +1,7 @@
 package com.azuredoom.transmog.util;
 
 import com.google.gson.JsonParser;
+import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import org.bson.BsonString;
 
@@ -25,23 +26,14 @@ public final class ItemTransmogUtil {
      * @param itemStack the {@code ItemStack} from which to extract the transmog item ID; can be null
      * @return the transmog item ID if it exists and is valid, or null if no transmog is applied or the input is null
      */
-    @SuppressWarnings("deprecation")
     @Nullable
     public static String getTransmogItemId(@Nullable ItemStack itemStack) {
         if (itemStack == null) {
             return null;
         }
 
-        var metadata = itemStack.getMetadata();
-        if (
-            metadata == null || !metadata.containsKey(TRANSMOG_METADATA_KEY) || !metadata.get(TRANSMOG_METADATA_KEY)
-                .isString()
-        ) {
-            return null;
-        }
-
-        var value = metadata.getString(TRANSMOG_METADATA_KEY).getValue();
-        return value == null || value.isBlank() ? null : value;
+        var value = itemStack.getFromMetadataOrNull(TRANSMOG_METADATA_KEY, Codec.STRING);
+        return (value == null || value.isBlank()) ? null : value;
     }
 
     /**
