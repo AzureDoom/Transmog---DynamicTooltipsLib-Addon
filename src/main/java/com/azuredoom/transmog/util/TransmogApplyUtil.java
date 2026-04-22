@@ -1,5 +1,6 @@
 package com.azuredoom.transmog.util;
 
+import com.azuredoom.transmog.TransmogMod;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.inventory.InventoryComponent;
@@ -117,8 +118,11 @@ public final class TransmogApplyUtil {
      */
     public static void refreshPlayer(@Nonnull PlayerRef playerRef) {
         var api = DynamicTooltipsApiProvider.get();
-        if (api != null) {
-            api.refreshPlayer(playerRef.getUuid());
+        if (api == null) {
+            TransmogMod.infoLog("DynamicTooltipsApiProvider is not initialized.");
+            return;
         }
+        api.refreshPlayer(playerRef.getUuid());
+        //api.refreshAllPlayers();
     }
 }
