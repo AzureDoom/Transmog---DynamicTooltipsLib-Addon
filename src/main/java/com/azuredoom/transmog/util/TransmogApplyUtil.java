@@ -1,6 +1,5 @@
 package com.azuredoom.transmog.util;
 
-import com.azuredoom.transmog.TransmogMod;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.inventory.InventoryComponent;
@@ -12,6 +11,8 @@ import org.herolias.tooltips.api.DynamicTooltipsApiProvider;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import com.azuredoom.transmog.TransmogMod;
 
 public final class TransmogApplyUtil {
 
