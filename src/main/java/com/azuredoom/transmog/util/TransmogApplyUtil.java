@@ -123,6 +123,5 @@ public final class TransmogApplyUtil {
             return;
         }
         api.refreshPlayer(playerRef.getUuid());
-        //api.refreshAllPlayers();
     }
 }
