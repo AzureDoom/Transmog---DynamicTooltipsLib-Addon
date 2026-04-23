@@ -83,9 +83,9 @@ public class ItemTransmogTooltipProvider implements TooltipProvider {
             return null;
         }
 
-        api.addGlobalLine(transmogItemId, "Item has transmog of " + transmogItem.getId());
         return TooltipData.builder()
             .hashInput(ItemTransmogUtil.buildHashInput(itemId, transmogItemId, model + "|" + texture))
+            .addLine("Item has transmog of " + transmogItem.getId())
             .visualOverrides(overrides.build())
             .build();
     }
